@@ -1,0 +1,240 @@
+cubes:
+  - name: hcp_master_table
+    sql_table: "\"PROCESSING\".\"HCP_MASTER_TABLE\""
+
+    joins: []
+
+    dimensions:
+      - name: hcp_id
+        sql: "{CUBE}.\"HCP_ID\""
+        type: string
+        primary_key: true
+
+      - name: current_13_week
+        sql: "{CUBE}.\"CURRENT_13_WEEK\""
+        type: number
+
+      - name: quarter_to_date
+        sql: "{CUBE}.\"QUARTER_TO_DATE\""
+        type: number
+
+      - name: current_week
+        sql: "{CUBE}.\"CURRENT_WEEK\""
+        type: number
+
+      - name: previous_12_months
+        sql: "{CUBE}.\"PREVIOUS_12_MONTHS\""
+        type: number
+
+      - name: top_growth_2022
+        sql: "{CUBE}.\"TOP_GROWTH_2022\""
+        type: number
+
+      - name: previous_week
+        sql: "{CUBE}.\"PREVIOUS_WEEK\""
+        type: number
+
+      - name: current_4_week
+        sql: "{CUBE}.\"CURRENT_4_WEEK\""
+        type: number
+
+      - name: current_8_week
+        sql: "{CUBE}.\"CURRENT_8_WEEK\""
+        type: number
+
+      - name: quantity
+        sql: "{CUBE}.\"QUANTITY\""
+        type: number
+
+      - name: quantity_normalized
+        sql: "{CUBE}.\"QUANTITY_NORMALIZED\""
+        type: number
+
+      - name: previous_8_week
+        sql: "{CUBE}.\"PREVIOUS_8_WEEK\""
+        type: number
+
+      - name: previous_quarter_to_date
+        sql: "{CUBE}.\"PREVIOUS_QUARTER_TO_DATE\""
+        type: number
+
+      - name: current_12_months
+        sql: "{CUBE}.\"CURRENT_12_MONTHS\""
+        type: number
+
+      - name: previous_13_week
+        sql: "{CUBE}.\"PREVIOUS_13_WEEK\""
+        type: number
+
+      - name: year_to_date
+        sql: "{CUBE}.\"YEAR_TO_DATE\""
+        type: number
+
+      - name: previous_4_week
+        sql: "{CUBE}.\"PREVIOUS_4_WEEK\""
+        type: number
+
+      - name: previous_year_to_date
+        sql: "{CUBE}.\"PREVIOUS_YEAR_TO_DATE\""
+        type: number
+
+      - name: factor
+        sql: "{CUBE}.\"FACTOR\""
+        type: number
+
+      - name: physician_name
+        sql: "{CUBE}.\"PHYSICIAN_NAME\""
+        type: string
+
+      - name: territory
+        sql: "{CUBE}.\"TERRITORY\""
+        type: string
+
+      - name: is_demand_flag
+        sql: "{CUBE}.\"IS_DEMAND_FLAG\""
+        type: string
+
+      - name: payer
+        sql: "{CUBE}.\"PAYER\""
+        type: string
+
+      - name: territory_id
+        sql: "{CUBE}.\"TERRITORY_ID\""
+        type: string
+
+      - name: zip
+        sql: "{CUBE}.\"ZIP\""
+        type: string
+
+      - name: market
+        sql: "{CUBE}.\"MARKET\""
+        type: string
+
+      - name: contest_target
+        sql: "{CUBE}.\"CONTEST_TARGET\""
+        type: string
+
+      - name: region_id
+        sql: "{CUBE}.\"REGION_ID\""
+        type: string
+
+      - name: nrx_flag
+        sql: "{CUBE}.\"NRX_FLAG\""
+        type: string
+
+      - name: hco_affiliation_id
+        sql: "{CUBE}.\"HCO_AFFILIATION_ID\""
+        type: string
+
+      - name: hcp_current_year
+        sql: "{CUBE}.\"HCP_CURRENT_YEAR\""
+        type: string
+
+      - name: ic_eligible
+        sql: "{CUBE}.\"IC_ELIGIBLE\""
+        type: string
+
+      - name: engagement_id
+        sql: "{CUBE}.\"ENGAGEMENT_ID\""
+        type: string
+
+      - name: ndc_code
+        sql: "{CUBE}.\"NDC_CODE\""
+        type: string
+
+      - name: hcp_current_quarter
+        sql: "{CUBE}.\"HCP_CURRENT_QUARTER\""
+        type: string
+
+      - name: segment
+        sql: "{CUBE}.\"SEGMENT\""
+        type: string
+
+      - name: channel
+        sql: "{CUBE}.\"CHANNEL\""
+        type: string
+
+      - name: transaction_id
+        sql: "{CUBE}.\"TRANSACTION_ID\""
+        type: string
+
+      - name: region
+        sql: "{CUBE}.\"REGION\""
+        type: string
+
+      - name: hco_affiliation_name
+        sql: "{CUBE}.\"HCO_AFFILIATION_NAME\""
+        type: string
+
+      - name: trx_flag
+        sql: "{CUBE}.\"TRX_FLAG\""
+        type: string
+
+      - name: is_target
+        sql: "{CUBE}.\"IS_TARGET\""
+        type: string
+
+      - name: rx_type
+        sql: "{CUBE}.\"RX_TYPE\""
+        type: string
+
+      - name: source_patient_id
+        sql: "{CUBE}.\"SOURCE_PATIENT_ID\""
+        type: string
+
+      - name: brand
+        sql: "{CUBE}.\"BRAND\""
+        type: string
+
+      - name: nbrx_flag
+        sql: "{CUBE}.\"NBRX_FLAG\""
+        type: string
+
+      - name: address
+        sql: "{CUBE}.\"ADDRESS\""
+        type: string
+
+      - name: city_state
+        sql: "{CUBE}.\"CITY_STATE\""
+        type: string
+
+      - name: pdrp
+        sql: "{CUBE}.\"PDRP\""
+        type: string
+
+      - name: date
+        sql: "{CUBE}.\"DATE\""
+        type: time
+
+      - name: last_shipment_date
+        sql: "{CUBE}.\"LAST_SHIPMENT_DATE\""
+        type: time
+
+      - name: latest_ship_date
+        sql: "{CUBE}.\"LATEST_SHIP_DATE\""
+        type: time
+
+      - name: shipped_date
+        sql: "{CUBE}.\"SHIPPED_DATE\""
+        type: time
+
+      - name: last_call_date
+        sql: "{CUBE}.\"LAST_CALL_DATE\""
+        type: time
+
+      - name: first_shipped_date
+        sql: "{CUBE}.\"FIRST_SHIPPED_DATE\""
+        type: time
+
+      - name: engagement_date
+        sql: "{CUBE}.\"ENGAGEMENT_DATE\""
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+
